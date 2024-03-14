@@ -6,19 +6,22 @@
 ::-webkit-scrollbar {
     display: none;
   }
-  
-  /* Track */
   ::-webkit-scrollbar-track {
     background: #f1f1f1; /* Color of the track */
   }
-  
-  /* Handle */
   ::-webkit-scrollbar-thumb {
     background: #888; /* Color of the scrollbar handle */
     border-radius: 5px; /* Roundness of the scrollbar handle */
   }
-  
-  /* Handle on hover */
   ::-webkit-scrollbar-thumb:hover {
     background: #555; /* Color of the scrollbar handle on hover */
   }
+
+  .custom-icon-green path {
+    fill: green;
+   }
+
+  .custom-icon-red path {
+    fill: red;
+   }
+   
