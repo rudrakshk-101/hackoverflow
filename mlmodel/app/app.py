@@ -41,6 +41,14 @@ CORS(app) # Enable CORS for all routes
 def index():
     return render_template('index.html')
 
+@app.route('/transmitMLHighSystem')
+def transmitHigh():
+    return render_template('transmitMLHighSystem.html')
+
+@app.route('/transmitMLLowSystem')
+def transmitLow():
+    return render_template('transmitMLLowSystem.html')
+
 @app.route('/crop-predict', methods=['POST'])
 def crop_prediction():
     title = 'Smart Agriculture System'

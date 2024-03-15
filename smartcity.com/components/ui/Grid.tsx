@@ -122,6 +122,7 @@ const SkeletonTwo = () => {
  }, [light, controls]);
 
  return (
+  <Link href={'/smart-traffic'}>
     <div className="traffic-light-container">
       <motion.div
         className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2 items-center justify-center"
@@ -137,6 +138,7 @@ const SkeletonTwo = () => {
         ))}
       </motion.div>
     </div>
+    </Link>
  );
 };
 
@@ -207,7 +209,7 @@ const SkeletonFour = () => {
       whileHover="hover"
       className="flex flex-1 w-full justify-center h-full min-h-[7rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
     >
-      <Image src="/smf.png" className="rounded-3xl px-2" width={650} height={200} alt="smart agriculture" />
+      <Image src="/smf.png" className="rounded-[8%] px-8" width={650} height={200} alt="smart agriculture" />
     </motion.div>
   );
 };

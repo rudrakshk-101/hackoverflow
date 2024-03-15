@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Smart Traffic Management</title>
+<style>
+ html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+ }
+ #map {
+    height: 100%;
+    width: 100%;
+ }
+</style>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMcC-5tmwyDBwxLCDM2Pf6ZBBjE0N1zPo&callback=initMap"
+    async defer></script>
+<script>
+ var map;
+ var trafficLayer;
+
+ function initMap() {
+    map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 16,
+      center: {lat: 43.121249, lng: -80.697447}
+    });
+    var trafficMarkers = [
+      {lat: 43.121249, lng: -80.697447},
+    ];
+
+    trafficMarkers.forEach(function (markerPosition) {
+ var marker = new google.maps.Marker({
+    position: markerPosition,
+    map: map,
+    icon: {
+      path: google.maps.SymbolPath.CIRCLE,
+      scale: 50, // Increase the scale to make the circle larger
+      fillColor: 'red',
+      fillOpacity: 0.25,
+      strokeWeight: 0
+    }
+ });
+});
+
+
+    // Programmatically trigger fullscreen mode
+    if (document.documentElement.requestFullscreen) {
+      document.documentElement.requestFullscreen();
+    } else if (document.documentElement.mozRequestFullScreen) { // Firefox
+      document.documentElement.mozRequestFullScreen();
+    } else if (document.documentElement.webkitRequestFullscreen) { // Chrome, Safari and Opera
+      document.documentElement.webkitRequestFullscreen();
+    } else if (document.documentElement.msRequestFullscreen) { // IE/Edge
+      document.documentElement.msRequestFullscreen();
+    }
+ }
+</script>
+
+</head>
+
+<body>
+  <div id="map"></div>
+</body>
+
+</html>
