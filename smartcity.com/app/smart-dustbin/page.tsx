@@ -11,11 +11,11 @@ export default function Page() {
     const fetchData = async () => {
       try {
         const response = await fetch("http://172.17.29.140/dustbin",{
-          method: "POST"
+          method: "GET"
         });
         const data = await response.json();
         console.log(data);
-        setStatus(data.sensorData === "Empty\r\n");
+        setStatus(data.sensorData === "Empty");
       } catch (error) {
         console.error("Error fetching data:", error);
       }

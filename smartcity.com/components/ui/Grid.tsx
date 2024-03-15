@@ -1,4 +1,6 @@
+
 "use client";
+
 import { cn } from "@/utils/cn";
 import { useState } from "react";
 import React from "react";
@@ -13,7 +15,7 @@ import Image from "next/image";
 
 export default function Grid() {
   return (
-    <BentoGrid className="max-w-4xl h-auto w-[100vw] scale-90 mx-auto md:auto-rows-[20rem]">
+    <BentoGrid className="max-w-4xl h-auto w-[100vw] scale-90 mx-auto md:auto-rows-[20rem] ">
       {items.map((item, i) => (
         <BentoGridItem
           key={i}
@@ -34,7 +36,7 @@ const Skeleton = () => (
 const SkeletonOne = () => {
   const dustbinVariants = {
      open: {
-       x: -50,
+       y: -40,
        transition: {
          duration: 0.5,
        },
@@ -48,24 +50,29 @@ const SkeletonOne = () => {
   };
  
   return (
-     <motion.div
-       className="flex flex-1 w-full h-full min-h-[8rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2 items-center justify-center"
-     >
-       <motion.div
-         className="w-24 h-24 bg-gray-200 dark:bg-gray-700 rounded-lg shadow-md flex items-center justify-center"
-       >
-         {/* Simulate the opening of the dustbin */}
-         <motion.div variants={dustbinVariants}
+    <Link href={'/smart-dustbin'}>
+    <motion.div
+    className="flex flex-col w-full h-full min-h-[8rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] space-y-2 items-center justify-center relative flex-1 "
+   >
+    <motion.div
+       className="w-full sm:w-24 h-[13vh] bg-gray-200 dark:bg-gray-700 rounded-lg shadow-md flex items-center justify-center"
+    >
+       <Image src={"/dust.png"} alt="recycle" width={40} height={40} className="mt-5" />
+       {/* Simulate the opening of the dustbin */}
+       <motion.div variants={dustbinVariants}
          initial="closed"
-         whileHover="open" className="w-16 h-16 bg-gray-300 dark:bg-gray-600 rounded-lg shadow-inner transform rotate-45"></motion.div>
-       </motion.div>
-     </motion.div>
+         whileHover="open" className="w-full sm:w-[6rem] h-8 top-[2vh] absolute bg-gray-500 rounded-[5px] shadow-inner transform rotate-45 flex justify-center "></motion.div>
+    </motion.div>
+   </motion.div>
+   </Link>
+   
   );
  };
  
 
  import  {  useEffect } from 'react';
 import {  useAnimation } from 'framer-motion';
+import Link from "next/link";
 
 const SkeletonTwo = () => {
  // Define the animation variants for each light
@@ -136,32 +143,38 @@ const SkeletonTwo = () => {
  
 
 const SkeletonThree = () => {
-  const variants = {
-    initial: {
-      backgroundPosition: "0 50%",
+  const Variants = {
+    open: {
+      x: -10,
+      y:-5,
+      z:-90,
+      transition: {
+        duration: 0.5,
+      },
     },
-    animate: {
-      backgroundPosition: ["0, 50%", "100% 50%", "0 50%"],
+    closed: {
+      x: 0,
+      y:0,
+      z:0,
+      transition: {
+        duration: 0.5,
+      },
     },
-  };
+ };
   return (
-    <motion.div
-      initial="initial"
-      animate="animate"
-      variants={variants}
-      transition={{
-        duration: 5,
-        repeat: Infinity,
-        repeatType: "reverse",
-      }}
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] rounded-lg bg-dot-black/[0.2] flex-col space-y-2"
-      style={{
-        background:
-          "linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab)",
-        backgroundSize: "400% 400%",
-      }}
-    >
-      <motion.div className="h-full w-full rounded-lg"></motion.div>
+    <motion.div className="flex justify-center items-center h-screen">
+      <motion.div className="animate-rotateX" variants={Variants}
+         initial="closed"
+         whileHover="open">
+        <Image
+          src="/solarpanel.png" 
+          alt="Animated Image"
+          width={100} 
+          height={100} 
+          className="transform transition-transform duration-500 ease-in-out"
+        />
+        
+      </motion.div>
     </motion.div>
   );
 };
@@ -194,7 +207,7 @@ const SkeletonFour = () => {
       whileHover="hover"
       className="flex flex-1 w-full justify-center h-full min-h-[7rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-row space-x-2"
     >
-      <Image src="/behance.png" className="scale-150"  width={300} height={1000} alt="smart agriculture" />
+      <Image src="/smf.png" className="rounded-3xl px-2" width={650} height={200} alt="smart agriculture" />
     </motion.div>
   );
 };
@@ -225,35 +238,13 @@ const SkeletonFive = () => {
   };
 
   return (
-    <motion.div
-      initial="initial"
-      whileHover="animate"
-      className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2"
-    >
-      <motion.div
-        variants={variants}
-        className="flex flex-row rounded-2xl border border-neutral-100 dark:border-white/[0.2] p-2  items-start space-x-2 bg-white dark:bg-black"
-      >
-        <Image
-          src="https://pbs.twimg.com/profile_images/1417752099488636931/cs2R59eW_400x400.jpg"
-          alt="avatar"
-          height="100"
-          width="100"
-          className="rounded-full h-10 w-10"
-        />
-        <p className="text-xs text-neutral-500">
-          There are a lot of cool framerworks out there like React, Angular,
-          Vue, Svelte that can make your life ....
-        </p>
-      </motion.div>
-      <motion.div
-        variants={variantsSecond}
-        className="flex flex-row rounded-full border border-neutral-100 dark:border-white/[0.2] p-2 items-center justify-end space-x-2 w-3/4 ml-auto bg-white dark:bg-black"
-      >
-        <p className="text-xs text-neutral-500">Use PHP.</p>
-        <div className="h-6 w-6 rounded-full bg-gradient-to-r from-pink-500 to-violet-500 flex-shrink-0" />
-      </motion.div>
-    </motion.div>
+    <div className="flex flex-1 w-full h-full min-h-[6rem] dark:bg-dot-white/[0.2] bg-dot-black/[0.2] flex-col space-y-2">
+ <div className="h-[8vw] w-[8vw] rounded-[50%] dark:bg-[red] mt-[4vh] ml-[5vw] text-center relative">
+    <h1 className="dark:font-extrabold text-white text-2xl absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 md:text-2xl lg:text-3xl xl:text-4xl">SOS</h1>
+ </div>
+</div>
+
+   
   );
 };
 const items = [
@@ -280,7 +271,7 @@ const items = [
     //  icon: <IconTrafficLight className="h-4 w-4 text-neutral-500" />, // Assuming IconTrafficLight is a suitable icon for traffic
   },
   {
-     title: "Smart Street Light System",
+     title: "Smart Solar Panel System",
      description: (
        <span className="text-sm">
          Smart street lighting that adjusts based on demand and time of day.
