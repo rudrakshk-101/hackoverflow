@@ -22,7 +22,6 @@ NextGen Smart City Module is an integrated smart city platform that leverages Io
 - [**Next JS**](https://nextjs.org/): React-based framework for building server-side rendered and statically exported web apps.
 - [**Typescript**](https://www.typescriptlang.org/): Statically typed superset of JavaScript, adds type annotations to enhance code reliability & readability
 - [**Arduino UNO**](https://www.arduino.cc/en/software/): Arduino UNO - Connecting Sensors and transferring data to WiFi Module.
-- [**Pusher**](https://pusher.com/): WebSockets solution for Realtime updates and bidirectional communication.
 - [**TailwindCSS**](https://tailwindcss.com/): Utility-first CSS framework
 - [**TensorFlow**](https://tensorflow.com/): Machine Learning Library By Google, utilized for ML Models.
 
