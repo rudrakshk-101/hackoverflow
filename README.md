@@ -33,6 +33,7 @@ NextGen Smart City Module is an integrated smart city platform that leverages Io
 - Smart Emergency Service
 
 ## Architecture
+<img width="1024" alt="Screenshot 2024-03-16 at 6 42 07 AM" src="https://github.com/jatinsahijwani/hackoverflow/assets/117177197/4f9bdc02-e731-4328-9133-bc9f8d63b81d">
 
 ## Installation steps
 
@@ -50,3 +51,4 @@ npm install
 ```bash
 npm run dev
 ```
+
