@@ -34,7 +34,7 @@ const loadingStates = [
  { text: "Finishing it up" }
 ];
 
-export function MultiStepLoaderDemo() {
+function MultiStepLoaderDemo() {
  const [loading, setLoading] = useState(false);
  return (
     <div className="w-full h-[60vh] flex items-center justify-center">
