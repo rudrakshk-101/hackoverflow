@@ -31,3 +31,22 @@ NextGen Smart City Module is an integrated smart city platform that leverages Io
 - Smart Traffic Management Module
 - Smart Solar Panel
 - Smart Emergency Service
+
+## Architecture
+
+## Installation steps
+
+1. - Fork the [repo](https://github.com/jatinsahijwani/hackoverflow)
+   - Clone the repo to your local system `git clone https://github.com/jatinsahijwani/hackoverflow.git`
+   - Change current directory `cd hackoverflow`
+2. Install latest version of [Nodejs](https://nodejs.org/en/) and install all the dependencies:
+
+```bash
+npm install
+```
+
+2. Run the development server:
+
+```bash
+npm run dev
+```
