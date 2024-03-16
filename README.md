@@ -1,4 +1,4 @@
-#NextGen Smart City Module
+# NextGen Smart City Module
 
 NextGen Smart City Module is an integrated smart city platform that leverages IoT, Machine Learning, and Web technologies to enhance urban living and connectivity. The platform offers a multifaceted solution addressing various challenges faced by modern cities.
 
