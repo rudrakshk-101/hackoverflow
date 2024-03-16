@@ -25,3 +25,9 @@ NextGen Smart City Module is an integrated smart city platform that leverages Io
 - [**TailwindCSS**](https://tailwindcss.com/): Utility-first CSS framework
 - [**TensorFlow**](https://tensorflow.com/): Machine Learning Library By Google, utilized for ML Models.
 
+## Features
+- Smart Waste Management Module
+- Smart Agricultural Module
+- Smart Traffic Management Module
+- Smart Solar Panel
+- Smart Emergency Service
