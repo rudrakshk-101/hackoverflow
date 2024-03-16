@@ -27,13 +27,14 @@ NextGen Smart City Module is an integrated smart city platform that leverages Io
 
 ## Features
 - Smart Waste Management Module
-- Smart Agricultural Module
+- Smart Agricultural Module![module](https://github.com/jatinsahijwani/hackoverflow/assets/117177197/57a73bcf-1764-4ef5-a45a-59a4ad78fd2e)
+
 - Smart Traffic Management Module
 - Smart Solar Panel
 - Smart Emergency Service
 
 ## Architecture
-<img width="1024" alt="Screenshot 2024-03-16 at 6 42 07 AM" src="https://github.com/jatinsahijwani/hackoverflow/assets/117177197/4f9bdc02-e731-4328-9133-bc9f8d63b81d">
+<img width="1024" alt="Screenshot 2024-03-16 at 6 42 07 AM" src="https://github.com/jatinsahijwani/hackoverflow/assets/117177197/e00f7564-3bf4-45c7-b730-0db3d18f7a05">
 
 ## Installation steps
 
